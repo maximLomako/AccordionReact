@@ -2,18 +2,21 @@ import React, {useState} from "react";
 import s from "./OnOff.module.css"
 
 
+type OnOffPropsType = {
+  onClick: (on: boolean) => void
+  on: boolean
+}
+
+const OnOff = (props: OnOffPropsType) => {
 
 
-const OnOff = () => {
-
-  let [on, setOn] = useState(false);
   // const on = false;
 
   const onStyle = {
     border: '1px solid black',
     padding: '10px',
     borderRadius: '50%',
-    background: on ? 'green' : 'white',
+    background: props.on ? 'green' : 'white',
     cursor: 'pointer'
   };
 
@@ -21,7 +24,7 @@ const OnOff = () => {
     border: '1px solid black',
     padding: '10px',
     borderRadius: '50%',
-    background: on ? 'white' : 'red',
+    background: props.on ? 'white' : 'red',
     cursor: 'pointer'
   };
 
@@ -30,14 +33,14 @@ const OnOff = () => {
     padding: '10px',
     borderRadius: '50%',
     marginLeft: '10px',
-    background: on ? 'green' : 'red'
+    background: props.on ? 'green' : 'red'
   };
 
 
   return (
     <div className={s.wrapper}>
-      <button onClick={() => {setOn(true)}} style={onStyle}>On</button>
-      <button onClick={() => {setOn(false)}} style={offStyle}>Off</button>
+      <button onClick={() => {props.onClick(true)}} style={onStyle}>On</button>
+      <button onClick={() => {props.onClick(false)}} style={offStyle}>Off</button>
       <div style={indicatorStyle}></div>
     </div>
   )

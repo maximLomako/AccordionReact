@@ -1,35 +1,42 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
-import Accordion from "./Components/Accordion/Accordion";
-import {Rating} from "./Components/Rating/Rating";
+import {Rating, RatingValueType} from "./Components/Rating/Rating";
 import OnOff from './Components/OnOff/OnOff';
-import UnControlledAccordion from "./Components/UnControlledAccordion/UnControlledAccordion";
 import {UnControlledRating} from "./Components/UnControlledRating/UnControlledRating";
+import UnControlledAccordion from "./Components/UnControlledAccordion/UnControlledAccordion";
+import Accordion from "./Components/Accordion/Accordion";
+import UnControlledOnOff from "./Components/UnControlledOnOff/UnControlledOnOff";
 
 
 function App() {
+
+  const [ratingValue, setRatingValue] =
+    useState<RatingValueType>(3);
+
+  const [collapsed, setCollapsed] =
+  useState<boolean>(true);
+
+  const [on, setOn] = useState(false);
+
   return (
-    <div>
-      {/*<PageTitle title="This is APP component"/>*/}
-      <PageTitle title="Hello Dear friends"/>
-      {/*Article 1*/}
-      {/*<Rating value={3}/>*/}
-      <Accordion titleValue='Menu' collapsed={false}/>
-      <Accordion titleValue='Something else' collapsed={false}/>
-      <Rating value={1}/>
-      <Rating value={2}/>
-      <Rating value={3}/>
-      <Rating value={4}/>
-      <Rating value={5}/>
-      <UnControlledAccordion titleValue='Uncontrolled'/>
-      <UnControlledRating/>
-      <OnOff/>
-      <OnOff/>
+    <div className="App">
+      controlled
+      <OnOff onClick={setOn} on={on}/>
+      uncontrolled
+      <UnControlledOnOff onChange={setOn}/> {on.toString()}
+      {/*<Rating value={ratingValue} onClick={setRatingValue}/>*/}
+      {/*<UnControlledRating />*/}
+      <UnControlledAccordion titleValue={'UnControlledAccordion'} />
+
+      <Accordion titleValue={'Controlled'}
+                 collapsed={collapsed}
+                 onClick={() => {setCollapsed(!collapsed)}}
+      />
+
 
     </div>
   );
 }
-
 
 type PageTitlePropsType = {
   title: string
