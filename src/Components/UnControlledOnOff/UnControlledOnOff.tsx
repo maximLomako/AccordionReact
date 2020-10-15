@@ -6,7 +6,7 @@ type UnControlledOnOffPropsType = {
   onChange: (on: boolean) => void
 }
 
-const UnControlledOnOff = (props: UnControlledOnOffPropsType) => {
+export const UnControlledOnOff = (props: UnControlledOnOffPropsType) => {
 
   let [on, setOn] = useState(false);
   // const on = false;
@@ -53,5 +53,3 @@ const UnControlledOnOff = (props: UnControlledOnOffPropsType) => {
     </div>
   )
 }
-
-export default UnControlledOnOff;

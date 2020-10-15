@@ -2,12 +2,12 @@ import React, {useState} from "react";
 import s from "./OnOff.module.css"
 
 
-type OnOffPropsType = {
+export type OnOffPropsType = {
   onClick: (on: boolean) => void
   on: boolean
 }
 
-const OnOff = (props: OnOffPropsType) => {
+export const OnOff = (props: OnOffPropsType) => {
 
 
   // const on = false;
@@ -45,5 +45,3 @@ const OnOff = (props: OnOffPropsType) => {
     </div>
   )
 }
-
-export default OnOff;
