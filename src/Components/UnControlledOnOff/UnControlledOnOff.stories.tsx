@@ -1,8 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {UnControlledOnOff} from "./UnControlledOnOff";
-import {OnOff} from "../OnOff/OnOff";
 import {action} from "@storybook/addon-actions";
-
 
 
 export default {
@@ -12,13 +10,11 @@ export default {
 
 const OnOffClicked = action('on off clicked')
 
-export const OnMode = () => <UnControlledOnOff onChange={OnOffClicked} />
-export const OffMode = () => <UnControlledOnOff onChange={OnOffClicked} />
+export const OnMode = () => <UnControlledOnOff defaultOn={true} onChange={OnOffClicked}/>
+export const OffMode = () => <UnControlledOnOff defaultOff={false} onChange={OnOffClicked}/>
+export const BugMode = () => <div>Unsync whem chamge defaultValue when already rendered</div>
+export const DefaultInput = () => <input defaultValue={'yo'}/>
 
-export const ModeChange = () => {
-  const [value, setValue] = useState(true);
-  return <OnOff on={value} onClick={setValue}/>
-}
 
 
 

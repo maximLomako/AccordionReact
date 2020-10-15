@@ -9,7 +9,8 @@ export default {
 
 
 
-export const UnControlledAccordionExample = () => <UnControlledAccordion titleValue={'UnControlledAccordion acc'} />
+export const UnControlledAccordionExample = () => <UnControlledAccordion
+  titleValue={'UnControlledAccordion acc'} />
 
 
 
