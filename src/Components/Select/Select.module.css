@@ -1,0 +1,25 @@
+.select {
+    height: 200px;
+    width: 200px;
+}
+.title {
+
+    padding: 10px;
+    color: #1ea7fd;
+    border: 1px solid mediumvioletred;
+    background: slategrey;
+    position: relative;
+}
+.options {
+    display: none;
+    padding: 5px;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: gold;
+}
+.options:hover{
+    background: lightcoral;
+    transition: all .5s linear;
+}
+.options__active {
+    display: block;
+}

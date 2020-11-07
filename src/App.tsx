@@ -1,52 +1,63 @@
 import React, {useState} from 'react';
 import './App.css';
-import {Rating, RatingValueType} from "./Components/Rating/Rating";
+import {RatingValueType} from "./Components/Rating/Rating";
 import {OnOff} from './Components/OnOff/OnOff';
-import {UnControlledRating} from "./Components/UnControlledRating/UnControlledRating";
-import UnControlledAccordion from "./Components/UnControlledAccordion/UnControlledAccordion";
 import {Accordion} from "./Components/Accordion/Accordion";
-import UnControlledOnOff from "./Components/UnControlledOnOff/UnControlledOnOff";
+import {ItemType, Select} from "./Components/Select/Select";
 
 
 function App() {
 
-  const [ratingValue, setRatingValue] =
-    useState<RatingValueType>(3);
+  // const [ratingValue, setRatingValue] =
+  //   useState<RatingValueType>(3);
+  //
+  // const [collapsed, setCollapsed] =
+  //   useState<boolean>(true);
+  // const [on, setOn] = useState(false);
 
-  const [collapsed, setCollapsed] =
-  useState<boolean>(true);
+  const [collapsed, setCollapsed] = useState(false);
+  const [itemValue, setItemValue] = useState< 1 | 2 | 3 >(1)
+  const items: ItemType[] = [
+    {title: 'Vasya', value: 1},
+    {title: 'Petya', value: 2},
+    {title: 'Kolya', value: 3},
+    {title: 'Sveta', value: 4},
+    {title: 'Masha', value: 5},
+    {title: 'Katya', value: 6}
+  ]
 
-  const [on, setOn] = useState(false);
+  const changeCollapsed = () => {
+    setCollapsed(!collapsed)
+  }
+
+  const changeSelectTitleValue = (id: any) => {
+    setItemValue(id)
+    setCollapsed(!collapsed)
+  }
 
   return (
     <div className="App">
-      controlled
-      <OnOff onClick={setOn} on={on}/>
-      uncontrolled
-      <UnControlledOnOff onChange={setOn}/> {on.toString()}
-      {/*<Rating value={ratingValue} onClick={setRatingValue}/>*/}
-      {/*<UnControlledRating />*/}
-      <UnControlledAccordion titleValue={'UnControlledAccordion'} />
+      <Select items={items}
+              itemValue={itemValue}
+              collapsed={collapsed}
+              changeCollapsed={changeCollapsed}
+              changeSelectTitleValue={changeSelectTitleValue}/>
 
-      <Accordion titleValue={'Controlled'}
-                 collapsed={collapsed}
-                 onClick={() => {setCollapsed(!collapsed)}}
-      />
 
 
     </div>
   );
 }
 
-type PageTitlePropsType = {
-  title: string
-}
-
-function PageTitle(props: PageTitlePropsType) {
-  return (
-    <h1>{props.title}</h1>
-  )
-}
+// type PageTitlePropsType = {
+//   title: string
+// }
+//
+// function PageTitle(props: PageTitlePropsType) {
+//   return (
+//     <h1>{props.title}</h1>
+//   )
+// }
 
 
 export default App;
