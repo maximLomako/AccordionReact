@@ -4,6 +4,7 @@ import {RatingValueType} from "./Components/Rating/Rating";
 import {OnOff} from './Components/OnOff/OnOff';
 import {Accordion} from "./Components/Accordion/Accordion";
 import {ItemType, Select} from "./Components/Select/Select";
+import {UnControlledAccordion} from "./Components/UnControlledAccordion/UnControlledAccordion";
 
 
 function App() {
@@ -37,15 +38,16 @@ function App() {
 
   return (
     <div className="App">
-      <Select items={items}
-              itemValue={itemValue}
-              collapsed={collapsed}
-              changeCollapsed={changeCollapsed}
-              changeSelectTitleValue={changeSelectTitleValue}/>
+    {/*  <Select items={items}*/}
+    {/*          itemValue={itemValue}*/}
+    {/*          collapsed={collapsed}*/}
+    {/*          changeCollapsed={changeCollapsed}*/}
+    {/*          changeSelectTitleValue={changeSelectTitleValue}/>*/}
 
 
-
+    <UnControlledAccordion titleValue={"hello"} />
     </div>
+
   );
 }
 
