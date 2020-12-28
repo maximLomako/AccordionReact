@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {OnOff} from "./OnOff";
-import {Rating, RatingValueType} from "../Rating/Rating";
 import {action} from "@storybook/addon-actions";
 
 
