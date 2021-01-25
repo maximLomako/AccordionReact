@@ -1,0 +1,231 @@
+.OnOff_wrapper__2Zr2Q {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+
+.OnOff_btn__1HB2A {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.OnOff_bubble__3mDej {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 50%;
+    margin-left: 10px;
+
+}
+
+.OnOff_green__fxYSq {
+    background: greenyellow;
+}
+
+.OnOff_red__32zgK {
+    background: tomato;
+}
+.SecondSelect_select__2ZkQv span.SecondSelect_main__1acqP{
+    position: relative;
+    border: 1px solid black;
+    display: inline-block;
+    padding: 5px;
+    min-height: 10px;
+    min-width: 50px;
+}
+.SecondSelect_items__HhTcC{
+    position: absolute;
+    border: 1px solid black;
+    padding: 5px;
+}
+.SecondSelect_item__onBWk.SecondSelect_selected__3xCqF {
+    background: blue;
+    color: white;
+}
+
+.Select_select__2T9xh {
+    height: 200px;
+    width: 200px;
+}
+.Select_title__30fq- {
+
+    padding: 10px;
+    color: #1ea7fd;
+    border: 1px solid mediumvioletred;
+    background: slategrey;
+    position: relative;
+}
+.Select_options__18CO9 {
+    display: none;
+    padding: 5px;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: gold;
+}
+.Select_options__18CO9:hover{
+    background: lightcoral;
+    transition: all .5s linear;
+}
+.Select_options__active__1CF7s {
+    display: block;
+}
+.UnControlledOnOff_wrapper__2wIRz {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+
+.UnControlledOnOff_btn__7pnTp {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.UnControlledOnOff_bubble__oaUYp {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 50%;
+    margin-left: 10px;
+
+}
+
+.UnControlledOnOff_green__nttx2 {
+    background: greenyellow;
+}
+
+.UnControlledOnOff_red__5TyDd {
+    background: tomato;
+}
+.storybook-button {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 3em;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+}
+.storybook-button--primary {
+  color: white;
+  background-color: #1ea7fd;
+}
+.storybook-button--secondary {
+  color: #333;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+.storybook-button--small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+.storybook-button--medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+.storybook-button--large {
+  font-size: 16px;
+  padding: 12px 24px;
+}
+
+.ExampleSelect_exampleSelect__2syZh{
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+svg {
+  display: inline-block;
+  vertical-align: top;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1;
+  margin: 6px 0 6px 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+button + button {
+  margin-left: 10px;
+}
+
+section {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 48px 20px;
+  margin: 0 auto;
+  max-width: 600px;
+  color: #333;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 1;
+  margin: 0 0 4px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+p {
+  margin: 1em 0;
+}
+
+a {
+  text-decoration: none;
+  color: #1ea7fd;
+}
+
+ul {
+  padding-left: 30px;
+  margin: 1em 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.tip {
+  display: inline-block;
+  border-radius: 1em;
+  font-size: 11px;
+  line-height: 12px;
+  font-weight: 700;
+  background: #e7fdd8;
+  color: #66bf3c;
+  padding: 4px 12px;
+  margin-right: 10px;
+  vertical-align: top;
+}
+
+.tip-wrapper {
+  font-size: 13px;
+  line-height: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.tip-wrapper svg {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  margin-right: 4px;
+  vertical-align: top;
+  margin-top: 3px;
+}
+
+.tip-wrapper svg path {
+  fill: #1ea7fd;
+}
+
+
+/*# sourceMappingURL=main.b4da40cc.chunk.css.map*/
