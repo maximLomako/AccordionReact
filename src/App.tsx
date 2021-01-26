@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import {ItemType} from "./Components/Select/Select";
 import {UnControlledAccordion} from "./Components/UnControlledAccordion/UnControlledAccordion";
+import {AnalogClock} from "./Components/Clock/AnalogClock";
 
 
 function App() {
@@ -42,7 +43,9 @@ function App() {
             {/*          changeSelectTitleValue={changeSelectTitleValue}/>*/}
 
 
-            <UnControlledAccordion titleValue={"hello"}/>
+            {/*<UnControlledAccordion titleValue={"hello"}/>*/}
+            <AnalogClock />
+
         </div>
 
     );
