@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 
-// export default {
-//     title: 'useEffect demo'
-// }
+export default {
+    title: 'useEffect demo'
+}
 //
 // export const simpleExample = () => {
 //     const [counter, setCounter] = useState(1);
@@ -73,3 +73,39 @@ import React, {useEffect, useState} from "react";
 //         </>
 //     )
 // }
+
+// export const ResetEffectExample = () => {
+//     const [counter, setCounter] = useState(1);
+//     useEffect(() => {
+//     console.log('effect occured')
+//         return () => {
+//         console.log('Reset Effect')
+//         }
+//     }, [counter])
+//
+//     const increaseCounter = () => {
+//         setCounter(counter + 1)
+//     }
+//
+//     return <>
+//         Hello, counter: {counter}
+//         <button onClick={increaseCounter}>+</button>
+//         </>
+// }
+
+export const onKeyTracker = () => {
+    const [text, setText] = useState('');
+    useEffect(() => {
+        const handler = (e: KeyboardEvent) => {
+            setText(text + e.key)
+        }
+        window.addEventListener('keypress', handler)
+        return () => {
+            window.removeEventListener('keypress', handler)
+        }
+    }, [text])
+
+    return <>
+        Hello, text: {text}
+    </>
+}
