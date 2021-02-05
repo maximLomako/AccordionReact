@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import {ItemType} from "./Components/Select/Select";
-import {UnControlledAccordion} from "./Components/UnControlledAccordion/UnControlledAccordion";
-import {AnalogClock} from "./Components/Clock/AnalogClock";
+import {Clock} from "./Components/Clock/Clock";
 
 
 function App() {
@@ -44,8 +43,9 @@ function App() {
 
 
             {/*<UnControlledAccordion titleValue={"hello"}/>*/}
-            <AnalogClock />
-
+            {/*<AnalogClock />*/}
+            <Clock mode={'digital'}/>
+            <Clock mode={'analog'}/>
         </div>
 
     );
